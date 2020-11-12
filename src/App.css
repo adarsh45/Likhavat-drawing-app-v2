@@ -1,38 +1,106 @@
-.App {
+body{
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+#container {
+  position: relative;
+  /* display: inline-block; */
+}
+#error-msg{
+  display: none;
+}
+#container #canvas, .overlay {
+  position: absolute;
+}
+
+.overlay{
+  float: right;
+  width: 100%;
+}
+
+#toolbar{
+  position: absolute;
+  left: 0;
+  margin: 10px;
+  border-radius: 8px;
+  width: 66px;
+  background-color: #B200FF;
+}
+.tool{
+  border-radius: 8px;
+  margin: 0;
+  padding: 20px 0 26px 0;
+  color: #ffffff;
+  text-align: center;
+}
+.tool:hover, .colorBox:hover{
+  opacity: 0.7;
+  color: #ffffff;
+  background-color: #c1c1c1;
+}
+
+
+.colorBox{
+  border-radius: 50%;
+  background-color: #ffffff;
+  width: 50px;
+  height: 50px;
+  margin: 1em auto;
+}
+#white{background-color: #ffffff;}
+#yellow{background-color: #fff222;}
+#blue{background-color: #007bff;}
+.settings{
+  position: absolute;
+  left: 76px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 66px;
+  background-color: #B200FF;
+}
+
+#size-tool{
+  color: #ffffff;
+  margin: auto;
+  padding: 0.1em;
+}
+
+#size-tool div{
+  text-align: center;
+  font-size: 1.1em;
+  margin: 0.2em 0;
+}
+
+#size-tool button, #size-tool span{
+  border: none;
+  background-color: #B200FF;
+  color: #ffffff;
+  font-size: 1.1em;
+  padding: auto;
+  margin: 0.4em auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#size-tool button:hover{
+  opacity: 0.7;
+  background-color: #c1c1c1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.active{
+  background-color: #fff;
+  color: #202020;
+}
+
+@media only screen and (max-width: 600px){
+  #container{
+    display: none;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  #error-msg{
+        display: block;
+        padding: 50px;
+        text-align:center;
+        color: "black";
+    }
 }
